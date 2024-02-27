@@ -1,0 +1,20 @@
+workspace = { members = ["gltf-derive"] }
+[package]
+name = "gltf"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_repr = "0.1.18"
+
+vec1 = { version = "1.10.1", features = ["serde"] }
+
+gltf-derive = { path = "gltf-derive" }
+
+[dev-dependencies]
+rand = "0.8.5"
+glob = "*"
